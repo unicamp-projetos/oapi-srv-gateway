@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  oapi-srv-gateway:
+    build:
+      dockerfile: ./docker/srv.dockerfile
+      context: .
+    image: evisita/oapi-srv-gateway
+    container_name: evisita/oapisrvgateway
+    ports:
+      - '8082:8080'
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    networks:
+      - evisita-network
+networks:
+  evisita-network:
+    driver: bridge
