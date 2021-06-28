@@ -1,0 +1,7 @@
+server:
+  port: 8083
+
+oapi:
+  srv:
+    usersAggregator: ${GATEWAY_USERS_AGGREGATOR:http://localhost:8082/users-aggregator/v1}
+    admin: ${GATEWAY_ADMIN:http://localhost:8084/admin/v1/}

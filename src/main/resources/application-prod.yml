@@ -1,0 +1,7 @@
+server:
+  port: 8080
+
+oapi:
+  srv:
+    usersAggregator: ${GATEWAY_USERS_AGGREGATOR:http://evisita-oapisrvusersaggregator:8080/users-aggregator/v1}
+    admin: ${GATEWAY_ADMIN:http://evisita-oapisrvadmin:8080/admin/v1/}
